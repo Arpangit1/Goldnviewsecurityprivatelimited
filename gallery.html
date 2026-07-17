@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="View the latest Goldn View Security gallery photos uploaded directly from our Google Drive folder.">
+    <title>Gallery | Goldn View Security</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-transition-enter">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Goldn View Security Logo"
+                    onerror="this.outerHTML='<span class=\'logo-text\'><span class=\'gold\'>Goldn View</span> Security</span>'">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down"
+                            style="font-size: 0.7rem; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="security-services.html">Security Services</a>
+                        <a href="bouncers.html">Bouncers</a>
+                        <a href="housekeeping.html">Housekeeping</a>
+                        <a href="caretaker-services.html">Caretaker Services</a>
+                        <a href="manpower-services.html">Manpower Services</a>
+                    </div>
+                </li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="tel:+919609052659" class="btn btn-primary nav-btn"><i class="fas fa-phone-alt"
+                    style="margin-right: 6px;"></i> Call Us</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header bg-services">
+        <div class="container">
+            <h1 class="fade-in-up">Our <span class="navy">Gallery</span></h1>
+            <p class="fade-in-up delay-1">Latest photos from our field operations and service updates.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section section" style="padding-top: 0;">
+        <div class="container">
+            <div class="gallery-status" id="gallery-status">
+                <i class="fas fa-spinner fa-spin"></i>
+                <p>Loading gallery...</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Lightbox -->
+    <div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightbox-image">
+            <h3 id="lightbox-title"></h3>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Premium Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <h4>Goldn View Security</h4>
+                    <p>We are a premier security agency committed to uncompromising protection. Highly trained personnel
+                        and strategic deployment to ensure your assets are safe.</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="https://www.facebook.com/profile.php?id=61589573786683" target="_blank"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919609052659" target="_blank" aria-label="WhatsApp"><i
+                                class="fab fa-whatsapp" style="font-size: 1.3rem;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="security-services.html">Security Services</a></li>
+                        <li><a href="bouncers.html">Bouncers</a></li>
+                        <li><a href="housekeeping.html">Housekeeping</a></li>
+                        <li><a href="caretaker-services.html">Caretaker Services</a></li>
+                        <li><a href="manpower-services.html">Manpower Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jamirdanaga, Near Simanagar BSF Camp, Mahatpur,
+                            Chapra, Nadia - 741164, West Bengal, India</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 9609052659</li>
+                        <li><i class="fas fa-envelope"></i> info.gvs@yahoo.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="compliance-text">CIN: U80100WB2025PTC284358</p>
+                <div class="footer-copyright" style="text-align: center;">
+                    <p>&copy; 2026 Goldn View Security Private Limited. All Rights Reserved.</p>
+                    <p style="margin-top: 5px;">Made with <i class="fas fa-heart" style="color: #ef4444;"></i> by <a
+                            href="https://www.filengro.in/" target="_blank"
+                            style="color: var(--gold); font-weight: 500;">Filengro</a></p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+    <script>
+        const GALLERY_API_URL = "https://script.google.com/macros/s/AKfycbws-0lx2s4El6eP1TyG-mM_pnQs7rUi9CUm4AceA8P-W9JOoT40nMtcCQkMMwH-AjTRxQ/exec";
+
+        const galleryGrid = document.getElementById('gallery-grid');
+        const galleryStatus = document.getElementById('gallery-status');
+        const lightbox = document.getElementById('gallery-lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+
+        let galleryItems = [];
+        let activeImageIndex = 0;
+
+        function setGalleryStatus(iconClass, message) {
+            galleryStatus.innerHTML = `<i class="${iconClass}"></i><p>${message}</p>`;
+            galleryStatus.style.display = 'flex';
+        }
+
+        function hideGalleryStatus() {
+            galleryStatus.style.display = 'none';
+        }
+
+        function getImageTitle(item) {
+            const rawTitle = (item.title || '').trim();
+            if (!rawTitle || rawTitle.toLowerCase().startsWith('no title')) {
+                return '';
+            }
+            return rawTitle;
+        }
+
+        function renderGallery(items) {
+            galleryItems = items
+                .filter(item => item && item.image)
+                .map(item => ({
+                    image: item.image,
+                    title: getImageTitle(item)
+                }));
+
+            if (!galleryItems.length) {
+                setGalleryStatus('fas fa-images', 'No gallery images found yet. Upload photos to the connected Google Drive folder.');
+                return;
+            }
+
+            hideGalleryStatus();
+            galleryGrid.innerHTML = galleryItems.map((item, index) => {
+                const titleHtml = item.title ? `<h3>${escapeHtml(item.title)}</h3>` : '';
+                const altText = item.title || 'Goldn View Security gallery image';
+                return `
+                    <button class="gallery-card reveal" type="button" data-index="${index}" aria-label="Open ${escapeHtml(altText)}">
+                        <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(altText)}" loading="lazy">
+                        ${titleHtml}
+                    </button>
+                `;
+            }).join('');
+
+            galleryGrid.querySelectorAll('.gallery-card').forEach(card => {
+                card.addEventListener('click', () => openLightbox(Number(card.dataset.index)));
+                card.classList.add('active');
+            });
+        }
+
+        function escapeHtml(value) {
+            return String(value)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        function escapeAttribute(value) {
+            return escapeHtml(value);
+        }
+
+        function openLightbox(index) {
+            activeImageIndex = index;
+            const item = galleryItems[activeImageIndex];
+            lightboxImage.src = item.image;
+            lightboxImage.alt = item.title || 'Goldn View Security gallery image';
+            lightboxTitle.textContent = item.title;
+            lightboxTitle.style.display = item.title ? 'block' : 'none';
+            lightbox.classList.add('active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function showAdjacentImage(direction) {
+            if (!galleryItems.length) {
+                return;
+            }
+            const nextIndex = (activeImageIndex + direction + galleryItems.length) % galleryItems.length;
+            openLightbox(nextIndex);
+        }
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightboxPrev.addEventListener('click', () => showAdjacentImage(-1));
+        lightboxNext.addEventListener('click', () => showAdjacentImage(1));
+        lightbox.addEventListener('click', event => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', event => {
+            if (!lightbox.classList.contains('active')) {
+                return;
+            }
+            if (event.key === 'Escape') {
+                closeLightbox();
+            }
+            if (event.key === 'ArrowLeft') {
+                showAdjacentImage(-1);
+            }
+            if (event.key === 'ArrowRight') {
+                showAdjacentImage(1);
+            }
+        });
+
+        fetch(GALLERY_API_URL, { cache: 'no-store' })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Gallery API failed');
+                }
+                return response.json();
+            })
+            .then(renderGallery)
+            .catch(() => {
+                setGalleryStatus('fas fa-exclamation-circle', 'Gallery could not be loaded right now. Please check the Google Apps Script deployment and Drive folder sharing.');
+            });
+    </script>
+</body>
+
+</html>

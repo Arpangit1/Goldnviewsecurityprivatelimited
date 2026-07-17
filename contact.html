@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Goldn View Security</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="page-transition-enter">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Goldn View Security Logo"
+                    onerror="this.outerHTML='<span class=\'logo-text\'><span class=\'gold\'>Goldn View</span> Security</span>'">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                                <li class="dropdown">
+                    <a href="services.html">Services <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 3px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="security-services.html">Security Services</a>
+                        <a href="bouncers.html">Bouncers</a>
+                        <a href="housekeeping.html">Housekeeping</a>
+                        <a href="caretaker-services.html">Caretaker Services</a>
+                        <a href="manpower-services.html">Manpower Services</a>
+                    </div>
+                </li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="careers.html">Careers</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <a href="tel:+919609052659" class="btn btn-primary nav-btn"><i class="fas fa-phone-alt" style="margin-right: 6px;"></i> Call Us</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header bg-contact">
+        <div class="container">
+            <h1 class="fade-in-up">Get In <span class="navy">Touch</span></h1>
+            <p class="fade-in-up delay-1">Secure your premises today. Contact our experts for a consultation.</p>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact section" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info reveal">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Jamirdanaga, Near Simanagar BSF Camp, Mahatpur, Chapra, Nadia - 741164, West Bengal,
+                                India</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+91 9609052659</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info.gvs@yahoo.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=61589573786683" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919609052659" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form reveal delay-1">
+                    <!-- Hidden iframe to absorb Google Form redirect (prevents page reload) -->
+                    <iframe id="hidden-iframe" name="hidden-iframe" style="display:none;"></iframe>
+
+                    <!-- Success Message (shown after submit) -->
+                    <div id="success-msg" style="display: none; text-align: center; padding: 30px; background: rgba(30, 142, 62, 0.1); color: #1e8e3e; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(30, 142, 62, 0.2);">
+                        <i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 15px; display: block;"></i>
+                        <h4 style="color: #1e8e3e; margin-bottom: 5px;">Thank you!</h4>
+                        <p>Your message has been sent successfully. Our team will get back to you shortly.</p>
+                    </div>
+
+                    <!-- Error Message (shown if Google Forms does not respond) -->
+                    <div id="error-msg" style="display: none; text-align: center; padding: 24px; background: rgba(239, 68, 68, 0.08); color: #b91c1c; border-radius: 15px; margin-bottom: 20px; border: 1px solid rgba(239, 68, 68, 0.2);">
+                        <i class="fas fa-exclamation-circle" style="font-size: 2.4rem; margin-bottom: 12px; display: block;"></i>
+                        <h4 style="color: #b91c1c; margin-bottom: 5px;">Message not sent</h4>
+                        <p>Please check your internet connection and try again, or contact us directly on WhatsApp.</p>
+                    </div>
+
+                    <!-- Contact Form connected to Google Forms -->
+                    <form id="contact-form"
+                        action="https://docs.google.com/forms/d/e/1FAIpQLScy_Y8zc10bcQhJ1wJozm2XXGWVSoKLWlEZ-arnF-9TxLxAjg/formResponse"
+                        method="POST"
+                        target="hidden-iframe">
+                        <input type="hidden" name="fvv" value="1">
+                        <input type="hidden" name="pageHistory" value="0">
+                        <input type="hidden" name="submit" value="Submit">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <input type="text" id="inp-name" name="entry.1259077092" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="email" id="inp-email" name="entry.1956275929" placeholder="Your Email (e.g. you@gmail.com)" required>
+                                <span class="field-error" id="email-error">Please enter a valid email (must contain @ and domain)</span>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="tel" id="inp-phone" name="entry.656273714" placeholder="Your 10-digit Phone Number" required inputmode="numeric" maxlength="10" pattern="[0-9]{10}">
+                            <span class="field-error" id="phone-error">Please enter a valid 10-digit phone number (digits only)</span>
+                        </div>
+                        <textarea name="entry.1610131051" rows="5" placeholder="Your Message / Requirements" required></textarea>
+                        <button type="submit" id="submit-btn" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col footer-about">
+                    <h4>Goldn View Security</h4>
+                    <p>We are a premier security agency committed to uncompromising protection. Highly trained personnel
+                        and strategic deployment to ensure your assets are safe.</p>
+                                        <div class="social-links" style="margin-top: 20px;">
+                        <a href="https://www.facebook.com/profile.php?id=61589573786683" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919609052659" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i></a>
+                    </div>
+                </div>
+                                                                <div class="footer-col footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">All Services</a></li>
+                        <li><a href="industries.html">Industries</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="security-services.html">Security Services</a></li>
+                        <li><a href="bouncers.html">Bouncers</a></li>
+                        <li><a href="housekeeping.html">Housekeeping</a></li>
+                        <li><a href="caretaker-services.html">Caretaker Services</a></li>
+                        <li><a href="manpower-services.html">Manpower Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Jamirdanaga, Near Simanagar BSF Camp, Mahatpur,
+                            Chapra, Nadia - 741164, West Bengal, India</li>
+                        <li><i class="fas fa-phone-alt"></i> +91 9609052659</li>
+                        <li><i class="fas fa-envelope"></i> info.gvs@yahoo.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="compliance-text">CIN: U80100WB2025PTC284358</p>
+                <div class="footer-copyright" style="text-align: center;">
+                    <p>&copy; 2026 Goldn View Security Private Limited. All Rights Reserved.</p>
+                    <p style="margin-top: 5px;">Made with <i class="fas fa-heart" style="color: #ef4444;"></i> by <a href="https://www.filengro.in/" target="_blank" style="color: var(--gold); font-weight: 500;">Filengro</a></p>
+                </div>
+                <div class="footer-legal">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- Google Form Submission Script with Validation -->
+    <script>
+        const form = document.getElementById('contact-form');
+        const hiddenIframe = document.getElementById('hidden-iframe');
+        const successMsg = document.getElementById('success-msg');
+        const errorMsg = document.getElementById('error-msg');
+        const submitBtn = document.getElementById('submit-btn');
+        const phoneInput = document.getElementById('inp-phone');
+        const emailInput = document.getElementById('inp-email');
+        const phoneError = document.getElementById('phone-error');
+        const emailError = document.getElementById('email-error');
+
+        let isSubmitting = false;
+        let submitTimeout = null;
+
+        // Phone: only allow digits, block everything else on keypress
+        phoneInput.addEventListener('keypress', function (e) {
+            if (!/[0-9]/.test(e.key)) {
+                e.preventDefault();
+            }
+        });
+
+        // Also strip any pasted non-digit characters
+        phoneInput.addEventListener('input', function () {
+            this.value = this.value.replace(/[^0-9]/g, '');
+            validatePhone();
+        });
+
+        // Email: live validation
+        emailInput.addEventListener('input', validateEmail);
+        emailInput.addEventListener('blur', validateEmail);
+
+        function validatePhone() {
+            const val = phoneInput.value.trim();
+            if (val.length > 0 && val.length < 10) {
+                phoneError.style.display = 'block';
+                phoneInput.style.borderColor = '#ef4444';
+                return false;
+            } else if (val.length === 10) {
+                phoneError.style.display = 'none';
+                phoneInput.style.borderColor = '#22c55e';
+                return true;
+            } else {
+                phoneError.style.display = 'none';
+                phoneInput.style.borderColor = '';
+                return false;
+            }
+        }
+
+        function validateEmail() {
+            const val = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (val.length > 0 && !emailRegex.test(val)) {
+                emailError.style.display = 'block';
+                emailInput.style.borderColor = '#ef4444';
+                return false;
+            } else if (emailRegex.test(val)) {
+                emailError.style.display = 'none';
+                emailInput.style.borderColor = '#22c55e';
+                return true;
+            } else {
+                emailError.style.display = 'none';
+                emailInput.style.borderColor = '';
+                return false;
+            }
+        }
+
+        hiddenIframe.addEventListener('load', function () {
+            if (!isSubmitting) {
+                return;
+            }
+
+            clearTimeout(submitTimeout);
+            isSubmitting = false;
+            form.style.display = 'none';
+            errorMsg.style.display = 'none';
+            successMsg.style.display = 'block';
+        });
+
+        function resetSubmitButton() {
+            submitBtn.innerHTML = 'Send Message';
+            submitBtn.disabled = false;
+        }
+
+        // On Submit: final validation check before sending
+        form.addEventListener('submit', function (e) {
+            const isPhoneValid = validatePhone();
+            const isEmailValid = validateEmail();
+
+            if (!isPhoneValid || !isEmailValid) {
+                e.preventDefault();
+                if (!isPhoneValid) {
+                    phoneError.style.display = 'block';
+                    phoneInput.focus();
+                } else {
+                    emailError.style.display = 'block';
+                    emailInput.focus();
+                }
+                return;
+            }
+
+            // All valid - let the browser submit the form to Google Forms.
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            isSubmitting = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:8px;"></i>Sending...';
+            submitBtn.disabled = true;
+
+            submitTimeout = setTimeout(function () {
+                isSubmitting = false;
+                errorMsg.style.display = 'block';
+                resetSubmitButton();
+            }, 12000);
+        });
+    </script>
+        <script src="script.js"></script>
+</body>
+
+</html>
