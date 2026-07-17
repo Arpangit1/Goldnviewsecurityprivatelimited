@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://goldnviewsecurity.com/sitemap.xml
+Sitemap: https://goldnviewsecurity.in/sitemap.xml
